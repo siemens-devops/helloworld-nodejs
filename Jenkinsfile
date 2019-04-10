@@ -5,6 +5,11 @@ pipeline {
     skipDefaultCheckout true
   }
   stages {
+    stage('build') {
+      steps {
+        echo 'build application'
+      }
+    }
     stage('Test') {
       steps {
         checkout scm
@@ -22,9 +27,6 @@ pipeline {
       steps {
          echo "TODO - build and push image"
       }
-    }
-    stage('deploy') {
-      echo 'deploy'
     }
   }
 }
