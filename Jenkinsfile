@@ -22,9 +22,9 @@ pipeline {
       steps {
          echo "TODO - build and push image"
       }
-      steps {
-         echo "push image"
-      }
+    }
+    stage('deploy') {
+      echo 'deploy'
     }
   }
 }
