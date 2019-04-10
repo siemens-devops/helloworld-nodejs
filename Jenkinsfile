@@ -5,6 +5,11 @@ pipeline {
     skipDefaultCheckout true
   }
   stages {
+    stage('build') {
+      steps {
+        echo 'build application'
+      }
+    }
     stage('Test') {
       steps {
         checkout scm
